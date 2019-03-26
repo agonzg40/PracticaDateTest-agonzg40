@@ -1,4 +1,4 @@
- package es.unileon.prg.date;
+ package es.unileon.prg1.date;
 
 public class MainDate {
 
@@ -7,11 +7,11 @@ public class MainDate {
         Date today;
 
         try {
-            today = new Date(9, 10, 2017);
+            today = new Date(1, 1, 2017);
             System.out.println(today.toString());
 
         } catch (DateException e) {
-            System.out.println(e.getMessage());
+            
         }
 
     }

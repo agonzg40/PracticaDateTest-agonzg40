@@ -1,4 +1,4 @@
-package es.unileon.prg.date;
+package es.unileon.prg1.date;
 
 public class Date {
 
@@ -25,7 +25,7 @@ public class Date {
 		else{ //Aquí si valdría
 		this.month=month;
 		}
-		if(day<1||day>getDaysOfMonth()) { //inicializo el if para decir que el dia no vale
+		if(day<1||day>daysOfMonth()) { //inicializo el if para decir que el dia no vale
 			throw new DateException("combinacion de dia y mes incorrecta");
 		}
 		else{ //Aquí si valdría
@@ -40,7 +40,7 @@ public class Date {
 	
 	}
 
-	public int getDaysOfMonth(int month){ //comienzo con getDaysOfMonth
+	public int daysOfMonth(int month){ //comienzo con getDaysOfMonth
 
 		int day=0; //defino day
 
@@ -142,7 +142,7 @@ public class Date {
 
 			day++; //se introduce el ++, porque se van sumando días de uno en uno
 
-			if(day>getDaysOfMonth(month)){ //if para que pasaría si los días fueran mayores
+			if(day>daysOfMonth(month)){ //if para que pasaría si los días fueran mayores
 
 				day=1;
 				month++; //hay que sumar los meses de 1 en uno
@@ -163,7 +163,7 @@ public class Date {
 
 			}catch(DateException e){
 
-				System.err.println(e.getMessage());
+				
 
 			}
 
@@ -308,9 +308,9 @@ public class Date {
 
 }			
 
-	public int getDaysOfMonth(){
+	public int daysOfMonth(){
 
-		return getDaysOfMonth(this.month);
+		return daysOfMonth(this.month);
 
 	}
 
@@ -359,7 +359,7 @@ public class Date {
 	
 	public boolean isDayRight(int day){
 		
-			return((day>0)&&(day<=getDaysOfMonth(this.month)));
+			return((day>0)&&(day<=daysOfMonth(this.month)));
 
 		}
 	
@@ -381,7 +381,7 @@ public class Date {
 
 		}catch(DateException e){
 
-			System.err.println(e.getMessage());
+			
 
 		}
 
@@ -419,7 +419,7 @@ public class Date {
 				
 			}catch(DateException e) {
 
-				System.out.println(e.getMessage());
+				
 
 			}
 					
@@ -439,7 +439,7 @@ public class Date {
 
 				auxi.setMonth(i);
 
-				if(auxi.getDaysOfMonth()==getDaysOfMonth()){
+				if(auxi.daysOfMonth()==daysOfMonth()){
 					
 					month.append(auxi.getMonthName()+(" "));
 	
@@ -449,7 +449,7 @@ public class Date {
 
 		}catch(DateException e){
 
-			System.err.println(e.getMessage());
+		
 
 		}
 
@@ -467,14 +467,14 @@ public class Date {
 
 			for(int i=1;i<this.month;i++) {
 
-				suma=suma+auxiliar.getDaysOfMonth(); //Realizo la operación
+				suma=suma+auxiliar.daysOfMonth(); //Realizo la operación
 				auxiliar.setMonth(i+1);
 				
 			}
 
 		}catch(DateException e){
 
-			System.out.println(e.getMessage());
+			
 
 		}
 
@@ -539,7 +539,7 @@ public class Date {
 
 		}catch (DateException e){
 
-			System.out.println(e.getMessage());
+			
 
 		}
 

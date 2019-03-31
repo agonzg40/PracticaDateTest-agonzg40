@@ -7,7 +7,9 @@ public class MainDate {
         Date today;
 
         try {
-            today = new Date(1, 1, 2017);
+            
+            today = new Date(day, month, year);
+            
             System.out.println(today.toString());
 
         } catch (DateException e) {

@@ -5,10 +5,16 @@ public class Date {
 	private int day; //Aquí defino el día, mes y año
 	private int month;
 	private int year;
-
-
+	
+	public Date() {
+		
+		this.day = 1;
+		this.month = 1;
+		this.year = 2019;
+	}
+	
 	public Date(int day, int month, int year) throws DateException{
-
+	
 		this.year = year;
 		this.month=month;
 		this.day=day;
@@ -40,7 +46,7 @@ public class Date {
 	
 	}
 
-	public int daysOfMonth(int month){ //comienzo con getDaysOfMonth
+	public int daysOfMonth(int month){ //comienzo con daysOfMonth
 
 		int day=0; //defino day
 
@@ -617,4 +623,3 @@ public class Date {
 		return this.day + "/" + this.month + "/" + this.year;
 	}
 }
-
